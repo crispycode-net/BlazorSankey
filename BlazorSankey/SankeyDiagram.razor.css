@@ -1,0 +1,12 @@
+﻿.node {
+    cursor: crosshair;
+}
+
+text {
+    font-family: sans-serif;
+    font-size: 12px;
+}
+
+svg.sankey {
+    background-color: white;
+}

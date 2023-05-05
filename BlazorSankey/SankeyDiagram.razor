@@ -1,0 +1,43 @@
+﻿<svg class="sankey" @ref="svgElement" style="@StyleString">
+    <g class="links">
+        @if (graph != null)
+        {
+            foreach (var link in graph.Links)
+            {
+                <g class="link">
+                    <linearGradient gradientUnits="userSpaceOnUse"
+                                    x1="@link.pX1"
+                                    x2="@link.pX2"
+                                    id="@link.pId">
+                        <stop offset="0" stop-color="@link.StartColor"></stop>
+                        <stop offset="1" stop-color="@link.EndColor"></stop>
+                    </linearGradient>
+
+                    <path class="link"
+                          d="@link.pPath"
+                          fill="none"
+                          stroke="url(#@link.pId)"
+                          stroke-width="@link.pWidth"
+                          stroke-opacity="0.5">
+                    </path>
+
+                    <title>@link.pTitle</title>
+                </g>
+            }
+        }
+    </g>
+
+    <g class="nodes">
+        @if (graph != null)
+        {
+            foreach (var node in graph.Nodes)
+            {
+                <g class="node">
+                    <rect class="node" x="@node.pX0" y="@node.pY0" width="@node.pWidth" height="@node.pHeight" fill="@node.Color" opacity="@node.pOpacity"></rect>
+                    <text x="@node.pXText" y="@node.pYMiddle" dy=".35em" text-anchor="@node.pTextAnchor">@node.Name</text>
+                    <title>@node.HoverText</title>
+                </g>
+            }
+        }
+    </g>
+</svg>
