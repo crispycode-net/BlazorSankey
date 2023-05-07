@@ -9,7 +9,12 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Codeus.BlazorSankey", "Blaz
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "UnitTests", "UnitTests\UnitTests.csproj", "{D1E0D4FC-5C85-4349-B94B-EC34E03B6B8B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BlazorWasmTest", "BlazorWasmTest\BlazorWasmTest.csproj", "{6B0069AC-2220-46B9-A7A5-3A58C4294DFE}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BlazorWasmTest", "BlazorWasmTest\BlazorWasmTest.csproj", "{6B0069AC-2220-46B9-A7A5-3A58C4294DFE}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "SolutionFiles", "SolutionFiles", "{4B09908D-92BF-430E-B28C-FDE8E77A4347}"
+	ProjectSection(SolutionItems) = preProject
+		Blazor-Sankey-Diagram.jpg = Blazor-Sankey-Diagram.jpg
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
