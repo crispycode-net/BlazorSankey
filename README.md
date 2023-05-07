@@ -2,7 +2,7 @@
 
 This repo contains a sankey diagram component that can be used in Blazor applications. At the moment the implementation is very basic but should already be useful for some cases.
 
-![alt text](https://github.com/codeus-de/BlazorSankey/blob/master/BlazorSankeyTest/Blazor-Sankey-Diagram.jpg)
+![Sample Sankey Diagram](Blazor-Sankey-Diagram.jpg)
 
 The BlazorSankeyTest project shows a sample - the usage should be qiet straight forward:
 

@@ -14,6 +14,8 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "SolutionFiles", "SolutionFiles", "{4B09908D-92BF-430E-B28C-FDE8E77A4347}"
 	ProjectSection(SolutionItems) = preProject
 		Blazor-Sankey-Diagram.jpg = Blazor-Sankey-Diagram.jpg
+		LICENSE.txt = LICENSE.txt
+		README.md = README.md
 	EndProjectSection
 EndProject
 Global
