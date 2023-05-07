@@ -1,15 +1,40 @@
 # BlazorSankey
 
-This repo contains a sankey diagram component that can be used in Blazor applications. At the moment the implementation is very basic but should already be useful for some cases.
+## About
+
+A sankey diagram component that can be used in Blazor applications. At the moment the implementation is very basic but should already be useful for some cases.
 
 ![Sample Sankey Diagram](Blazor-Sankey-Diagram.jpg)
 
-The BlazorSankeyTest project shows a sample - the usage should be qiet straight forward:
+## How to use
+
+The BlazorServerTest and BlazorWasmTest projecs include a sample - the usage should be straight forward:
+- Add the NuGet package to your project (coming soon, for know please download the project)
+- Place the SankeyDiagram component in your Blazor page
+- Define your nodes and links
+- Pass nodes and links to the component
+
+Optionally
+- Pass Width and Height parameters
+- Pass event handlers to OnNodeClicked and OnLinkClicked if you want to react to clicks
 
 ```
+@page "/"
+
+@using Codeus.BlazorSankey
+@using Codeus.BlazorSankey.Model;
+
+<SankeyDiagram 
+    Width="100%" 
+    Height="402px" 
+    Nodes="@nodes" 
+    Links="@links" 
+    OnNodeClicked="NodeClicked" 
+    OnLinkClicked="LinkClicked" />
+
 @code {
     private List<Node> nodes = new List<Node> {
-        new Node(1, "Client Devices"),
+        new Node(1, "Client Devices", fixedValue: 8000),
         new Node(2, "Load Balancer"),
         new Node(3, "Web Server 1"),
         new Node(4, "Web Server 2"),
@@ -34,5 +59,15 @@ The BlazorSankeyTest project shows a sample - the usage should be qiet straight 
         new Link(4, 8, 800),
         new Link(8, 9, 1600)
     };
+    
+    private void NodeClicked(Node node)
+    {
+        Console.WriteLine($"Node {node.Name} clicked");
+    }
+
+    private void LinkClicked(Link link)
+    {
+        Console.WriteLine($"Link {link.pId} clicked");
+    }
 }
 ```

@@ -10,6 +10,10 @@ namespace Codeus.BlazorSankey
         [Parameter] public string Height { get; set; } = "100%";
         [Parameter] public List<Node> Nodes { get; set; } = new List<Node>();
         [Parameter] public List<Link> Links { get; set; } = new List<Link>();
+        [Parameter] public EventCallback<Node> OnNodeClicked { get; set; }
+        [Parameter] public EventCallback<Link> OnLinkClicked { get; set; }
+
+        public string StyleString => $"width:{Width}; height:{Height};";
 
         [Inject] IJSRuntime? JSRuntime { get; set; }
 
@@ -21,7 +25,6 @@ namespace Codeus.BlazorSankey
             base.OnInitialized();
         }
 
-        public string StyleString => $"width:{Width}; height:{Height};";
 
         protected override async Task OnAfterRenderAsync(bool firstRender)
         {
@@ -37,6 +40,16 @@ namespace Codeus.BlazorSankey
 
                 StateHasChanged();
             }
+        }
+
+        private void NodeClicked(Node node)
+        {
+            OnNodeClicked.InvokeAsync(node);
+        }
+
+        private void LinkClicked(Link link)
+        {
+            OnLinkClicked.InvokeAsync(link);
         }
     }
 }

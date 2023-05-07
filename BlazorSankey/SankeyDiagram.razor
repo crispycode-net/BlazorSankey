@@ -18,7 +18,8 @@
                           fill="none"
                           stroke="url(#@link.pId)"
                           stroke-width="@link.pWidth"
-                          stroke-opacity="0.5">
+                          stroke-opacity="0.5"
+                          @onclick="() => LinkClicked(link)">
                     </path>
 
                     <title>@link.pTitle</title>
@@ -33,7 +34,15 @@
             foreach (var node in graph.Nodes)
             {
                 <g class="node">
-                    <rect class="node" x="@node.pX0" y="@node.pY0" width="@node.pWidth" height="@node.pHeight" fill="@node.Color" opacity="@node.pOpacity"></rect>
+                    <rect class="node" 
+                        x="@node.pX0" 
+                        y="@node.pY0" 
+                        width="@node.pWidth"
+                        height="@node.pHeight" 
+                        fill="@node.Color" 
+                        opacity="@node.pOpacity"
+                        @onclick="() => NodeClicked(node)">
+                    </rect>
                     <text x="@node.pXText" y="@node.pYMiddle" dy=".35em" text-anchor="@node.pTextAnchor">@node.Name</text>
                     <title>@node.HoverText</title>
                 </g>
