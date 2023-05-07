@@ -1,6 +1,6 @@
 ﻿using System.Globalization;
 
-namespace BlazorSankey.Model
+namespace Codeus.BlazorSankey.Model
 {
     public class Node
     {

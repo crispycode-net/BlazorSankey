@@ -1,10 +1,10 @@
 ﻿using System.Globalization;
 
-namespace BlazorSankey.Model
+namespace Codeus.BlazorSankey.Model
 {
     public class Link
     {
-        public Link(object sourceId, object targetId, double? value = null, string? title = null, string? startColor = null, string? endColor = null)
+        public Link(object sourceId, object targetId, double value, string? title = null, string? startColor = null, string? endColor = null)
         {
             SourceId = sourceId;
             TargetId = targetId;

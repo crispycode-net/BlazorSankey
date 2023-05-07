@@ -1,4 +1,4 @@
-﻿namespace BlazorSankey.Model
+﻿namespace Codeus.BlazorSankey.Model
 {
     public class Graph
     {

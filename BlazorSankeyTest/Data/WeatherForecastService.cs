@@ -1,4 +1,4 @@
-namespace BlazorSankeyTest.Data
+namespace BlazorServerTest.Data
 {
     public class WeatherForecastService
     {

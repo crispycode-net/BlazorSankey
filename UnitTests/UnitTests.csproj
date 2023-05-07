@@ -22,7 +22,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\BlazorSankey\BlazorSankey.csproj" />
+    <ProjectReference Include="..\BlazorSankey\Codeus.BlazorSankey.csproj" />
   </ItemGroup>
 
 </Project>

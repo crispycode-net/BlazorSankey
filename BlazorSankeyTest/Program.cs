@@ -1,8 +1,8 @@
-using BlazorSankeyTest.Data;
+using BlazorServerTest.Data;
 using Microsoft.AspNetCore.Components;
 using Microsoft.AspNetCore.Components.Web;
 
-namespace BlazorSankeyTest
+namespace BlazorServerTest
 {
     public class Program
     {

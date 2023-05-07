@@ -1,6 +1,6 @@
-﻿using BlazorSankey.Model;
+﻿using Codeus.BlazorSankey.Model;
 
-namespace BlazorSankey
+namespace Codeus.BlazorSankey
 {
     public class GraphBuilder
     {
