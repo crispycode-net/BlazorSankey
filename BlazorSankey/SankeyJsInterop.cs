@@ -1,7 +1,7 @@
 using Microsoft.AspNetCore.Components;
 using Microsoft.JSInterop;
 
-namespace Codeus.BlazorSankey
+namespace CrispyCode.BlazorSankey
 {
     public class SankeyJsInterop : IAsyncDisposable
     {
@@ -10,7 +10,7 @@ namespace Codeus.BlazorSankey
         public SankeyJsInterop(IJSRuntime jsRuntime)
         {
             moduleTask = new(() => jsRuntime.InvokeAsync<IJSObjectReference>(
-                "import", "./_content/Codeus.BlazorSankey/sankey.js").AsTask());
+                "import", "./_content/CrispyCode.BlazorSankey/sankey.js").AsTask());
         }
 
         public async ValueTask<string> Prompt(string message)

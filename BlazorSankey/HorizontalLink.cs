@@ -1,6 +1,6 @@
 ﻿using System.Globalization;
 
-namespace Codeus.BlazorSankey
+namespace CrispyCode.BlazorSankey
 {
     public class HorizontalLink
     {

@@ -5,7 +5,7 @@ VisualStudioVersion = 17.5.33502.453
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BlazorServerTest", "BlazorSankeyTest\BlazorServerTest.csproj", "{5BD638AB-E6AD-4671-A547-2FB87D3DB83A}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Codeus.BlazorSankey", "BlazorSankey\Codeus.BlazorSankey.csproj", "{3A113931-4765-42B8-818E-F06C1C80D750}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CrispyCode.BlazorSankey", "BlazorSankey\CrispyCode.BlazorSankey.csproj", "{3A113931-4765-42B8-818E-F06C1C80D750}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "UnitTests", "UnitTests\UnitTests.csproj", "{D1E0D4FC-5C85-4349-B94B-EC34E03B6B8B}"
 EndProject

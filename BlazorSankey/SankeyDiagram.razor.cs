@@ -1,8 +1,8 @@
-using Codeus.BlazorSankey.Model;
+using CrispyCode.BlazorSankey.Model;
 using Microsoft.AspNetCore.Components;
 using Microsoft.JSInterop;
 
-namespace Codeus.BlazorSankey
+namespace CrispyCode.BlazorSankey
 {
     public partial class SankeyDiagram
     {

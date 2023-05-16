@@ -1,4 +1,4 @@
-﻿namespace Codeus.BlazorSankey
+﻿namespace CrispyCode.BlazorSankey
 {    
     public static class ColorUtils
     {

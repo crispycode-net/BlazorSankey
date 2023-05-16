@@ -1,21 +1,21 @@
-<Project Sdk="Microsoft.NET.Sdk.Razor">
+﻿<Project Sdk="Microsoft.NET.Sdk.Razor">
 
   <PropertyGroup>
     <TargetFramework>net7.0</TargetFramework>
     <Nullable>enable</Nullable>
     <ImplicitUsings>enable</ImplicitUsings>
-    <Title>Codeus Blazor Sankey</Title>
+    <Title>CrispyCode Blazor Sankey</Title>
     <Description>A Sankey Diagram for Blazor.
 Sankey diagrams are a type of flow diagram that show the magnitude and direction of flows in a system. They are often used to visualize energy, material, or cost transfers between processes or nodes. Sankey diagrams can help identify inefficiencies, losses, or opportunities for improvement in a system.</Description>
-    <PackageProjectUrl>https://www.codeus.de/blazor-sankey-diagramm</PackageProjectUrl>
+    <PackageProjectUrl>https://crispycode.net/blazor-sankey-diagram/</PackageProjectUrl>
     <PackageIcon>Blazor-Sankey-Diagram-Symbol.jpg</PackageIcon>
     <PackageReadmeFile>README.md</PackageReadmeFile>
     <PackageLicenseFile>LICENSE.txt</PackageLicenseFile>
     <AssemblyVersion></AssemblyVersion>
     <FileVersion></FileVersion>
     <Authors>Alexander Bartz</Authors>
-    <Version>1.0.1</Version>
-    <RepositoryUrl>https://github.com/codeus-de/BlazorSankey</RepositoryUrl>
+    <Version>1.0.2</Version>
+    <RepositoryUrl>https://github.com/crispycode-net/BlazorSankey</RepositoryUrl>
     <RepositoryType>git</RepositoryType>
     <PackageTags>Blazor;Sankey;Diagram;Flow;Data visualization; Flow diagram; Component</PackageTags>
     <IncludeSymbols>True</IncludeSymbols>

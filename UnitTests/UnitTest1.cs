@@ -1,5 +1,5 @@
-using Codeus.BlazorSankey;
-using Codeus.BlazorSankey.Model;
+using CrispyCode.BlazorSankey;
+using CrispyCode.BlazorSankey.Model;
 
 namespace UnitTests
 {

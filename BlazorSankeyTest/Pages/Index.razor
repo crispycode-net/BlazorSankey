@@ -1,8 +1,14 @@
 ﻿@page "/"
-@using Codeus.BlazorSankey
-@using Codeus.BlazorSankey.Model;
+@using CrispyCode.BlazorSankey
+@using CrispyCode.BlazorSankey.Model;
 
-<SankeyDiagram Width="100%" Height="402px" Nodes="@nodes" Links="@links"></SankeyDiagram>
+<SankeyDiagram 
+    Width="100%" 
+    Height="402px" 
+    Nodes="@nodes" 
+    Links="@links" 
+    OnNodeClicked="NodeClicked" 
+    OnLinkClicked="LinkClicked" />
 
 @code {
     private List<Node> nodes = new List<Node> {
@@ -31,4 +37,14 @@
         new Link(4, 8, 800),
         new Link(8, 9, 1600)
     };
+
+    private void NodeClicked(Node node)
+    {
+        Console.WriteLine($"Node {node.Name} clicked");
+    }
+
+    private void LinkClicked(Link link)
+    {
+        Console.WriteLine($"Link {link.pId} clicked");
+    }
 }

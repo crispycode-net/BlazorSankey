@@ -2,9 +2,12 @@
 
 ## About
 
+[![Nuget version](https://img.shields.io/nuget/v/CrispyCode.BlazorSankey?color=ff4081&label=nuget%20version&logo=nuget&style=flat-square)](https://www.nuget.org/packages/CrispyCode.BlazorSankey/)
+[![Nuget downloads](https://img.shields.io/nuget/dt/CrispyCode.BlazorSankey?color=ff4081&label=nuget%20downloads&logo=nuget&style=flat-square)](https://www.nuget.org/packages/CrispyCode.BlazorSankey/)
+
 A sankey diagram component that can be used in Blazor applications. At the moment the implementation is very basic but should already be useful for some cases.
 
-![Sample Sankey Diagram](Blazor-Sankey-Diagram.jpg)
+![Sample Sankey Diagram](https://raw.githubusercontent.com/crispycode-net/BlazorSankey/master/Blazor-Sankey-Diagram.jpg)
 
 ## How to use
 
@@ -21,8 +24,8 @@ Optionally
 ```
 @page "/"
 
-@using Codeus.BlazorSankey
-@using Codeus.BlazorSankey.Model;
+@using CrispyCode.BlazorSankey
+@using CrispyCode.BlazorSankey.Model;
 
 <SankeyDiagram 
     Width="100%" 
