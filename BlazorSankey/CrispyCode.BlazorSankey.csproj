@@ -14,7 +14,7 @@ Sankey diagrams are a type of flow diagram that show the magnitude and direction
     <AssemblyVersion></AssemblyVersion>
     <FileVersion></FileVersion>
     <Authors>Alexander Bartz</Authors>
-    <Version>1.0.2</Version>
+    <Version>1.0.3</Version>
     <RepositoryUrl>https://github.com/crispycode-net/BlazorSankey</RepositoryUrl>
     <RepositoryType>git</RepositoryType>
     <PackageTags>Blazor;Sankey;Diagram;Flow;Data visualization; Flow diagram; Component</PackageTags>
