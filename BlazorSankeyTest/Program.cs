@@ -1,4 +1,5 @@
 using BlazorServerTest.Data;
+using CrispyCode.BlazorSankey;
 using Microsoft.AspNetCore.Components;
 using Microsoft.AspNetCore.Components.Web;
 
@@ -12,7 +13,10 @@ namespace BlazorServerTest
 
             // Add services to the container.
             builder.Services.AddRazorPages();
-            builder.Services.AddServerSideBlazor();
+            builder.Services.AddServerSideBlazor(options =>
+            {
+                options.RootComponents.RegisterCustomElement<SankeyDiagram>("sankey-diagram");
+            });
             builder.Services.AddSingleton<WeatherForecastService>();
 
             var app = builder.Build();

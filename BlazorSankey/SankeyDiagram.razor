@@ -1,4 +1,9 @@
-﻿<svg class="sankey" @ref="svgElement" style="@StyleString">
+﻿@if (graph == null)
+{
+    <div>@NoDataHint</div>
+}
+
+<svg class="sankey" @ref="svgElement" style="@StyleString">
     <g class="links">
         @if (graph != null)
         {

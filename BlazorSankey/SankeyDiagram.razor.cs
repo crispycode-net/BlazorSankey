@@ -6,6 +6,7 @@ namespace CrispyCode.BlazorSankey
 {
     public partial class SankeyDiagram
     {
+        [Parameter] public string NoDataHint { get; set; } = "No Data";
         [Parameter] public string Width { get; set; } = "100%";
         [Parameter] public string Height { get; set; } = "100%";
         [Parameter] public List<Node> Nodes { get; set; } = new List<Node>();

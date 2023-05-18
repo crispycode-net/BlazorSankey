@@ -36,8 +36,11 @@ namespace CrispyCode.BlazorSankey
 
         
 
-        public Graph Build(IEnumerable<Node> nodes, IEnumerable<Link> links, double width, double height, Func<Node, int, double> align, double nodeWidth = 24, double nodePadding = 8, int iterations = 6)
+        public Graph? Build(IEnumerable<Node> nodes, IEnumerable<Link> links, double width, double height, Func<Node, int, double> align, double nodeWidth = 24, double nodePadding = 8, int iterations = 6)
         {
+            if (!nodes.Any() || !links.Any())
+                return null;
+
             var graph = new Graph(nodes.ToList(), links.ToList(), 0, 0, width, height, align, nodeWidth, nodePadding);
             Iterations = iterations;
 

@@ -43,6 +43,7 @@ Sankey diagrams are a type of flow diagram that show the magnitude and direction
   </ItemGroup>
 
   <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.Components.CustomElements" Version="7.0.5" />
     <PackageReference Include="Microsoft.AspNetCore.Components.Web" Version="7.0.5" />
   </ItemGroup>
 
