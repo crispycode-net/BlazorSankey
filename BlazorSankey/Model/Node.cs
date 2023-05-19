@@ -1,9 +1,17 @@
 ﻿using System.Globalization;
+using System.Text.Json.Serialization;
 
 namespace CrispyCode.BlazorSankey.Model
 {
     public class Node
     {
+        public Node(int id, string? name, double opacity = 0.6)
+        {
+            Id = id;
+            Name = name;
+            Opacity = opacity;
+        }
+
         public Node(object id, string? name = null, double? fixedValue = null, string? color = null, double opacity = 0.6, string? hoverText = null)
         {
             Id = id;
@@ -21,8 +29,13 @@ namespace CrispyCode.BlazorSankey.Model
         public double Opacity { get; }
         public string? HoverText { get; set; }
         public int Index { get; internal set; }
+
+        [JsonIgnore]
         public List<Link> SourceLinks { get; internal set; } = new List<Link>();
+
+        [JsonIgnore]
         public List<Link> TargetLinks { get; internal set; } = new List<Link>();
+
         public double? Value { get; internal set; }
         public int Depth { get; internal set; }
         public int Height { get; internal set; }

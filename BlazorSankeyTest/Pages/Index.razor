@@ -3,14 +3,19 @@
 @using CrispyCode.BlazorSankey.Model;
 
 <SankeyDiagram 
+    @ref=sankeyDiagram
     Width="100%" 
-    Height="402px" 
+    Height="402px"     
+    NoDataHint=""
+    JsonData="{'Nodes':[{'Name':'Client Devices','Id':1},{'Name':'Load Balancer','Id':2},{'Name':'Web Server 1','Id':3},{'Name':'Web Server 2','Id':4},{'Name':'Database Server','Id':5},{'Name':'Cache Server','Id':6},{'Name':'Storage Server','Id':7},{'Name':'API Server','Id':8},{'Name':'External Services','Id':9}],'Links':[{'SourceId':1,'TargetId':2,'Value':5000},{'SourceId':2,'TargetId':3,'Value':2500},{'SourceId':2,'TargetId':4,'Value':2500},{'SourceId':3,'TargetId':5,'Value':1000},{'SourceId':3,'TargetId':6,'Value':1500},{'SourceId':4,'TargetId':5,'Value':1000},{'SourceId':4,'TargetId':6,'Value':1500},{'SourceId':5,'TargetId':7,'Value':2000},{'SourceId':6,'TargetId':7,'Value':3000},{'SourceId':3,'TargetId':8,'Value':800},{'SourceId':4,'TargetId':8,'Value':800},{'SourceId':8,'TargetId':9,'Value':1600}]}"
     Nodes="@nodes" 
     Links="@links" 
     OnNodeClicked="NodeClicked" 
     OnLinkClicked="LinkClicked" />
 
 @code {
+    private SankeyDiagram? sankeyDiagram;
+
     private List<Node> nodes = new List<Node> {
         new Node(1, "Client Devices", fixedValue: 8000),
         new Node(2, "Load Balancer"),
@@ -41,6 +46,7 @@
     private void NodeClicked(Node node)
     {
         Console.WriteLine($"Node {node.Name} clicked");
+        Console.WriteLine(sankeyDiagram?.GetDataAsJson());
     }
 
     private void LinkClicked(Link link)

@@ -1,0 +1,21 @@
+/* _content/CrispyCode.BlazorSankey/SankeyDiagram.razor.rz.scp.css */
+.node[b-ook1p9oomf] {
+    cursor: crosshair;
+}
+
+text[b-ook1p9oomf] {
+    font-family: sans-serif;
+    font-size: 12px;
+}
+
+svg.sankey[b-ook1p9oomf] {
+    background-color: white;
+}
+
+.no-data[b-ook1p9oomf] {
+    font-size: 1.5em;
+    font-weight: bold;
+    text-align: center;
+    margin-top: 1em;
+    background-color: whitesmoke;
+}
