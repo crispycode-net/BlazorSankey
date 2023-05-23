@@ -40,6 +40,8 @@ Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "CustomElementTest", "Custom
 		SlnRelativePath = "CustomElementTest\"
 	EndProjectSection
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CrispyCode.BlazorSankeyInput", "CrispyCode.BlazorSankeyInput\CrispyCode.BlazorSankeyInput.csproj", "{16612609-4C00-476B-90A4-BAD8731C1DA1}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -66,6 +68,10 @@ Global
 		{C35DA9FE-2CB7-45FF-B0FD-77CFDBB7DF5A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C35DA9FE-2CB7-45FF-B0FD-77CFDBB7DF5A}.Release|Any CPU.ActiveCfg = Debug|Any CPU
 		{C35DA9FE-2CB7-45FF-B0FD-77CFDBB7DF5A}.Release|Any CPU.Build.0 = Debug|Any CPU
+		{16612609-4C00-476B-90A4-BAD8731C1DA1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{16612609-4C00-476B-90A4-BAD8731C1DA1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{16612609-4C00-476B-90A4-BAD8731C1DA1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{16612609-4C00-476B-90A4-BAD8731C1DA1}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

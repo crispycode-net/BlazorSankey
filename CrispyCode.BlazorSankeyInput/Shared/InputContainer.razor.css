@@ -1,0 +1,209 @@
+﻿::deep .diagram-canvas {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    outline: none;
+    overflow: hidden;
+    cursor: -webkit-grab;
+    cursor: grab;
+    touch-action: none;
+}
+
+::deep .diagram-svg-layer, .diagram-html-layer {
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    position: absolute;
+    pointer-events: none;
+    -webkit-transform-origin: 0 0;
+    -ms-transform-origin: 0 0;
+    transform-origin: 0 0;
+    width: 100%;
+    height: 100%;
+    overflow: visible;
+}
+
+::deep .html-layer, .svg-layer {
+    position: absolute;
+    pointer-events: none;
+    -webkit-transform-origin: 0 0;
+    -ms-transform-origin: 0 0;
+    transform-origin: 0 0;
+    width: 100%;
+    height: 100%;
+    overflow: visible;
+}
+
+::deep .node {
+    position: absolute;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    cursor: move;
+    pointer-events: all;
+}
+
+    ::deep .node.locked {
+        cursor: pointer;
+    }
+
+::deep .link {
+    pointer-events: visiblePainted;
+    cursor: pointer;
+}
+
+    ::deep .link path.selection-helper:hover {
+        stroke-opacity: .05;
+    }
+
+::deep .diagram-navigator {
+    z-index: 10;
+}
+
+    ::deep .diagram-navigator .current-view {
+        position: absolute;
+        border: 2px solid #000;
+    }
+
+::deep .group {
+    position: absolute;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    cursor: move;
+    pointer-events: all;
+}
+
+    ::deep .group .layer {
+        position: absolute;
+        overflow: visible;
+        pointer-events: none;
+    }
+
+::deep .link foreignObject {
+    overflow: visible;
+    pointer-events: none;
+}
+
+::deep .default-node {
+    width: 100px;
+    height: 80px;
+    border-radius: 10px;
+    background-color: #f5f5f5;
+    border: 1px solid #e8e8e8;
+    -webkit-box-shadow: 0 2px 1px -1px rgba(0,0,0,.2),0 1px 1px 0 rgba(0,0,0,.14),0 1px 3px 0 rgba(0,0,0,.12);
+    box-shadow: 0 2px 1px -1px rgba(0,0,0,.2),0 1px 1px 0 rgba(0,0,0,.14),0 1px 3px 0 rgba(0,0,0,.12);
+    position: relative;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+}
+
+    ::deep .default-node.selected {
+        border: 1px solid #6e9fd4;
+    }
+
+        ::deep .default-node.selected .port {
+            border: 1px solid #6e9fd4;
+        }
+
+    ::deep .default-node .port, .default.group .port {
+        width: 20px;
+        height: 20px;
+        margin: -10px;
+        border-radius: 50%;
+        background-color: #f5f5f5;
+        border: 1px solid #d4d4d4;
+        cursor: pointer;
+        position: absolute;
+    }
+
+        ::deep .default-node .port:hover, .default-node .port.has-links, .default.group .port.has-links {
+            background-color: #000;
+        }
+
+        ::deep .default-node .port.bottom, .default.group .port.bottom {
+            bottom: 0;
+            left: 50%;
+        }
+
+        ::deep .default-node .port.bottomleft, .default.group .port.bottomleft {
+            bottom: 0;
+            left: 0;
+        }
+
+        ::deep .default-node .port.bottomright, .default.group .port.bottomright {
+            bottom: 0;
+            right: 0;
+        }
+
+        ::deep .default-node .port.top, .default.group .port.top {
+            top: 0;
+            left: 50%;
+        }
+
+        ::deep .default-node .port.topleft, .default.group .port.topleft {
+            top: 0;
+            left: 0;
+        }
+
+        ::deep .default-node .port.topright, .default.group .port.topright {
+            top: 0;
+            right: 0;
+        }
+
+        ::deep .default-node .port.left, .default.group .port.left {
+            left: 0;
+            top: 50%;
+        }
+
+        ::deep .default-node .port.right, .default.group .port.right {
+            right: 0;
+            top: 50%;
+        }
+
+::deep .diagram-navigator.default {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    border: 3px solid #9ba8b0;
+    border-radius: 15px;
+    padding: 20px;
+    background-color: #fff;
+}
+
+::deep .group.default {
+    outline: 2px solid #000;
+    background: #c6c6c6;
+}
+
+    ::deep .group.default.selected {
+        outline: 2px solid #6e9fd4;
+    }
+
+::deep .link .link-label {
+    display: inline-block;
+    color: #fff;
+    background-color: #6e9fd4;
+    border-radius: .25rem;
+    padding: .25rem;
+    text-align: center;
+    font-size: .875rem;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    min-width: 3rem;
+    -webkit-transform: translate(-50%,-50%);
+    -ms-transform: translate(-50%,-50%);
+    transform: translate(-50%,-50%);
+}

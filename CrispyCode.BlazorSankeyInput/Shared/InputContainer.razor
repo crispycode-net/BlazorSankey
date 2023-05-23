@@ -1,0 +1,17 @@
+﻿@page "/"
+
+<div style="display: flex;">
+    <button @onclick="AddNodeClicked" >Add Node</button>
+</div>
+
+<div style="width:1000px; height: 800px;">
+
+    @if(initComplete)
+    {
+        <CascadingValue Value="Diagram">
+            <DiagramCanvas></DiagramCanvas>
+        </CascadingValue>
+    }
+</div>
+
+
